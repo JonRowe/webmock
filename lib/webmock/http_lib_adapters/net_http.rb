@@ -110,6 +110,7 @@ module WebMock
                 super_with_after_request.call
               }
             end
+            response
           else
             raise WebMock::NetConnectNotAllowedError.new(request_signature)
           end
